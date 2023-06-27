@@ -4,6 +4,9 @@ sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Satellite, function (sprite,
     otherSprite.sayText("Uploading.... plsese wait")
     otherSprite.setVelocity(-30, -30)
 })
+info.onScore(49, function () {
+    game.gameOver(true)
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile = sprites.createProjectileFromSprite(img`
         . 1 . 
@@ -19,14 +22,12 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         . 1 . 
         . 1 . 
         `, myShip, 0, -150)
+    music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.UntilDone)
 })
 sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
     scene.cameraShake(4, 500)
     sprite.destroy(effects.starField, 100)
     info.changeLifeBy(-1)
-})
-info.onScore(24, function () {
-    game.gameOver(true)
 })
 let myRock: Sprite = null
 let mySat: Sprite = null

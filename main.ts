@@ -32,7 +32,7 @@ let myRock: Sprite = null
 let mySat: Sprite = null
 let projectile: Sprite = null
 let myShip: Sprite = null
-info.setLife(20000)
+info.setLife(10)
 scene.setBackgroundImage(img`
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
     eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
@@ -460,7 +460,7 @@ game.onUpdateInterval(2000, function () {
     )
 })
 forever(function () {
-    music.play(music.stringPlayable("A E E C E A D C5 ", 120), music.PlaybackMode.UntilDone)
+    music.play(music.stringPlayable("A E E C E A D C5 ", 107), music.PlaybackMode.UntilDone)
 })
 game.onUpdateInterval(3000, function () {
     myRock = sprites.createProjectileFromSide(img`

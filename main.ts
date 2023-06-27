@@ -26,7 +26,7 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     sprite.destroy(effects.starField, 100)
     info.changeLifeBy(-1)
 })
-info.onScore(56, function () {
+info.onScore(90000000000000000000, function () {
     game.gameOver(true)
 })
 let myRock: Sprite = null
